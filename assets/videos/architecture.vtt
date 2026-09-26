@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.000
+Initial observation
+A frozen causal VAE encodes the video; the first temporal latent slice retains the initial observation.
+
+00:00:04.000 --> 00:00:08.000
+Render and action encoding
+Camera-aligned robot renderings and numerical joint and gripper trajectories provide conditioning.
+
+00:00:08.000 --> 00:00:13.000
+Render–action fusion
+Render tokens supply the queries; action tokens supply the keys and values in cross-attention.
+
+00:00:13.000 --> 00:00:18.000
+Per-token timestep modulation
+Each video token receives a conditioning vector added to its flow-timestep embedding.
+
+00:00:18.000 --> 00:00:22.000
+Future video prediction
+The video backbone predicts future frames from the initial observation and robot conditioning.
+
+00:00:22.000 --> 00:00:28.000
+Shared trainable parameters
+The adapter and backbone are trained jointly across embodiments; the VAE and robot renderers stay fixed.

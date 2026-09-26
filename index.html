@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Doppel — Render the Robot, Generate the World: One Video World Model Across Embodiments.">
+  <meta name="theme-color" content="#081c2c">
+  <title>Doppel — Render the Robot, Generate the World: One Video World Model Across Embodiments</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=4adc875acaf7">
+  <link rel="preload" as="image" href="assets/images/intro-poster.jpg">
+  <script src="metrics.js?v=49613cbeeab7" defer></script>
+  <script src="app.js?v=a52537f54c8d" defer></script>
+  <script src="comparison-catalog.js?v=71f6a9273f9a" defer></script>
+  <script src="comparisons.js?v=a58ed72e220d" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#project">Skip to project</a>
+  <header class="topbar">
+    <a class="wordmark" href="#top" aria-label="Doppel home"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Doppel</a>
+    <nav aria-label="Main navigation">
+      <a href="#overview">Overview</a><a href="#method">Method</a><a href="#comparisons">Results</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero" id="top" aria-label="Doppel introduction">
+      <video id="hero-video" class="hero-video" muted loop playsinline preload="none" poster="assets/images/intro-poster.jpg" data-autoplay data-src="assets/videos/ema-intro.mp4?v=8f1532456258" data-src-mobile="assets/videos/ema-intro-mobile.mp4?v=a12f60d8e84a" aria-label="From an initial scene to a robot rendering overlay and predicted motion, expanding from three selected examples to a mixed three-by-three grid and then a mixed nine-by-nine grid">
+        <track kind="captions" src="assets/videos/ema-intro.vtt?v=fd7a3654f710" srclang="en" label="English">
+      </video>
+      <div class="hero-shade"></div>
+      <div class="hero-copy">
+        <p class="eyebrow light">Anonymous submission · Robot world models</p>
+        <h1>Doppel<span>Render the Robot,<br>Generate the World.</span></h1>
+      </div>
+      <div class="hero-controls">
+        <button class="glass-button" id="motion-toggle" type="button" aria-pressed="false">Pause motion <span aria-hidden="true">Ⅱ</span></button>
+        <button class="glass-button" id="replay-intro" type="button">Replay intro <span aria-hidden="true">↻</span></button>
+        <a class="glass-button" href="#project" aria-label="Explore the project">Explore <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="project shell" id="project">
+      <div class="project-topline"><span class="eyebrow">Embodied prediction</span><span class="anonymous-label">Anonymous authors · Under double-blind review</span></div>
+      <h2 class="project-title"><span>Render the Robot, Generate the World:</span> One Video World Model Across Embodiments</h2>
+      <p class="project-lead">Doppel is a shared video world model conditioned on future robot renderings and numerical actions.</p>
+      <div class="facts" aria-label="One model to three embodiments"><div><strong>1</strong><span>model</span></div><span class="facts-arrow" aria-hidden="true">→</span><div><strong>3</strong><span>embodiments</span></div></div>
+    </section>
+
+    <section class="band abstract" id="abstract">
+      <div class="shell abstract-layout">
+        <div><p class="eyebrow">Overview</p><h2>Future robot renderings</h2></div>
+        <div class="prose"><p>Doppel combines future robot renderings with the numerical action trajectory. The renderings describe the robot’s geometry and motion in the image; numerical actions retain configuration information that may be visually ambiguous.</p><p>We train a shared conditioning adapter and video backbone on DROID, RoboMIND, and Bridge, covering Franka, UR5e, and WidowX. Robot-specific geometry and normalization are used to construct the inputs.</p></div>
+      </div>
+    </section>
+
+    <section class="shell section" id="overview">
+      <div class="section-heading"><div><p class="eyebrow">01 / Overview</p><h2>Model overview</h2></div><p>Doppel uses future embodiment renderings to improve robot–object interaction modeling. A shared model predicts future scene changes for Franka, UR5e, and WidowX.</p></div>
+      <figure class="film">
+        <video controls playsinline preload="none" data-poster="assets/images/figure-1-overview-poster.jpg" src="assets/videos/figure-1-overview.mp4" aria-label="Animated walkthrough of Figure 1">
+          <track kind="captions" src="assets/videos/figure-1-overview.vtt" srclang="en" label="English">
+        </video>
+        <figcaption><span><b>Figure 1.</b> Future robot renderings and numerical actions condition a shared video world model.</span><a href="assets/videos/figure-1-overview.mp4" download>Download MP4 <span aria-hidden="true">↓</span></a></figcaption>
+      </figure>
+      <div class="embodiments"><div><span class="dataset-dot droid"></span><strong>DROID</strong><span>Franka</span></div><div><span class="dataset-dot robomind"></span><strong>RoboMIND</strong><span>UR5e</span></div><div><span class="dataset-dot bridge"></span><strong>Bridge</strong><span>WidowX</span></div></div>
+    </section>
+
+    <section class="band" id="method">
+      <div class="shell section">
+        <div class="section-heading"><div><p class="eyebrow">02 / Method</p><h2>Model architecture</h2></div><p>Doppel encodes camera-aligned robot renderings with a frozen VAE and fuses their features with numerical actions.</p></div>
+        <figure class="film">
+          <video controls playsinline preload="none" data-poster="assets/images/architecture-poster.jpg" src="assets/videos/architecture.mp4" aria-label="Animated Doppel architecture walkthrough">
+            <track kind="captions" src="assets/videos/architecture.vtt" srclang="en" label="English">
+          </video>
+          <figcaption><span><b>Figure 2.</b> The adapter and video backbone are trained jointly across embodiments; the VAE and robot renderers remain fixed.</span><a href="assets/videos/architecture.mp4" download>Download MP4 <span aria-hidden="true">↓</span></a></figcaption>
+        </figure>
+        <div class="method-steps">
+          <article><span class="step-number">01</span><h3>Camera calibration</h3><p>Missing or inconsistent camera extrinsics are recovered during dataset preprocessing by aligning rendered robot trajectories with the recorded video.</p></article>
+          <article><span class="step-number">02</span><h3>Render–action fusion</h3><p>Render tokens supply the queries, and action tokens supply the keys and values in cross-attention.</p></article>
+          <article><span class="step-number">03</span><h3>Shared parameters</h3><p>All trainable parameters are shared across embodiments. The model uses no embodiment tokens or robot-specific heads.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison-band" id="comparisons">
+      <div class="shell section" id="results">
+        <div class="section-heading"><div><p class="eyebrow light">03 / Qualitative results</p><h2>Qualitative comparisons</h2></div><p>Ground truth, action-only, and Doppel predictions. Action-only models are trained separately for each dataset.</p></div>
+        <div class="comparison-picker">
+          <label>Dataset <select id="comparison-dataset"><option value="droid" selected>DROID</option><option value="robomind">RoboMIND</option><option value="bridge">Bridge</option></select></label>
+          <label>Split <select id="comparison-split"><option value="ood" selected>OOD</option><option value="val">Validation</option></select></label>
+          <p id="comparison-count" role="status">10 examples · DROID · OOD</p>
+        </div>
+        <h3 id="comparison-context" class="comparison-context" aria-live="polite">Fully new environment</h3>
+        <div id="comparison-gallery" class="comparison-gallery" aria-label="Video comparisons"></div>
+        <noscript><p>Enable JavaScript to browse the 60 video comparisons.</p></noscript>
+      </div>
+    </section>
+
+    <section class="shell section" id="quantitative">
+      <div class="section-heading"><div><p class="eyebrow">04 / Quantitative results</p><h2>Whole-frame prediction quality</h2></div><p>PSNR, SSIM, LPIPS, and object SCS on the validation and OOD test sets.</p></div>
+      <div class="metric-toolbar"><div class="filters" role="group" aria-label="Evaluation split"><button class="active" type="button" data-split="val" aria-pressed="true">Validation</button><button type="button" data-split="ood" aria-pressed="false">Out of distribution</button></div><span>200 clips per dataset and split</span></div>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Main quantitative results"><table><caption class="visually-hidden">Doppel and baselines on the selected evaluation split</caption><thead><tr><th scope="col">Dataset</th><th scope="col">Method</th><th scope="col">PSNR ↑</th><th scope="col">SSIM ↑</th><th scope="col">LPIPS ↓</th><th scope="col">SCS ↑</th></tr></thead><tbody id="results-table"></tbody></table></div>
+      <p class="table-note">Action-only models are trained separately on each dataset. Metrics exclude the conditioning frame. SCS averages over non-robot objects. Higher is better except for LPIPS.</p>
+      <figure class="scaling-figure"><img src="assets/images/scaling.png" alt="Training curves comparing action-only experts and Doppel multi across DROID, Bridge, and RoboMIND on validation and OOD PSNR and SCS" loading="lazy"><figcaption>Single-dataset action-only experts and Doppel (multi), with training draws measured per dataset.</figcaption></figure>
+    </section>
+
+  </main>
+  <footer class="shell footer"><a class="wordmark" href="#top"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span>Doppel</a><p>Anonymous authors · Under double-blind review</p><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>

@@ -1,0 +1,122 @@
+window.DOPPEL_METRICS = [
+  {
+    "Dataset": "DROID",
+    "Method": "Action-only",
+    "val_psnr": "22.228",
+    "val_ssim": "0.832",
+    "val_lpips": "0.085",
+    "val_scs_objects": "0.921",
+    "ood_psnr": "19.767",
+    "ood_ssim": "0.775",
+    "ood_lpips": "0.135",
+    "ood_scs_objects": "0.869"
+  },
+  {
+    "Dataset": "DROID",
+    "Method": "OSCAR (Finetuned)",
+    "val_psnr": "20.427",
+    "val_ssim": "0.751",
+    "val_lpips": "0.135",
+    "val_scs_objects": "0.903",
+    "ood_psnr": "18.619",
+    "ood_ssim": "0.705",
+    "ood_lpips": "0.174",
+    "ood_scs_objects": "0.854"
+  },
+  {
+    "Dataset": "DROID",
+    "Method": "Doppel (single)",
+    "val_psnr": "24.077",
+    "val_ssim": "0.860",
+    "val_lpips": "0.068",
+    "val_scs_objects": "0.938",
+    "ood_psnr": "21.151",
+    "ood_ssim": "0.799",
+    "ood_lpips": "0.115",
+    "ood_scs_objects": "0.898"
+  },
+  {
+    "Dataset": "DROID",
+    "Method": "Doppel (multi)",
+    "val_psnr": "24.220",
+    "val_ssim": "0.861",
+    "val_lpips": "0.067",
+    "val_scs_objects": "0.940",
+    "ood_psnr": "21.147",
+    "ood_ssim": "0.800",
+    "ood_lpips": "0.113",
+    "ood_scs_objects": "0.897"
+  },
+  {
+    "Dataset": "Bridge",
+    "Method": "Action-only",
+    "val_psnr": "25.869",
+    "val_ssim": "0.866",
+    "val_lpips": "0.052",
+    "val_scs_objects": "0.943",
+    "ood_psnr": "20.555",
+    "ood_ssim": "0.752",
+    "ood_lpips": "0.132",
+    "ood_scs_objects": "0.863"
+  },
+  {
+    "Dataset": "Bridge",
+    "Method": "OSCAR (Finetuned)",
+    "val_psnr": "22.559",
+    "val_ssim": "0.771",
+    "val_lpips": "0.117",
+    "val_scs_objects": "0.914",
+    "ood_psnr": "19.487",
+    "ood_ssim": "0.633",
+    "ood_lpips": "0.211",
+    "ood_scs_objects": "0.854"
+  },
+  {
+    "Dataset": "Bridge",
+    "Method": "Doppel (multi)",
+    "val_psnr": "26.458",
+    "val_ssim": "0.873",
+    "val_lpips": "0.049",
+    "val_scs_objects": "0.948",
+    "ood_psnr": "22.438",
+    "ood_ssim": "0.785",
+    "ood_lpips": "0.098",
+    "ood_scs_objects": "0.904"
+  },
+  {
+    "Dataset": "RoboMIND",
+    "Method": "Action-only",
+    "val_psnr": "29.629",
+    "val_ssim": "0.916",
+    "val_lpips": "0.041",
+    "val_scs_objects": "0.937",
+    "ood_psnr": "29.629",
+    "ood_ssim": "0.914",
+    "ood_lpips": "0.041",
+    "ood_scs_objects": "0.929"
+  },
+  {
+    "Dataset": "RoboMIND",
+    "Method": "OSCAR (Finetuned)",
+    "val_psnr": "27.456",
+    "val_ssim": "0.882",
+    "val_lpips": "0.079",
+    "val_scs_objects": "0.914",
+    "ood_psnr": "27.661",
+    "ood_ssim": "0.878",
+    "ood_lpips": "0.076",
+    "ood_scs_objects": "0.920"
+  },
+  {
+    "Dataset": "RoboMIND",
+    "Method": "Doppel (multi)",
+    "val_psnr": "30.964",
+    "val_ssim": "0.927",
+    "val_lpips": "0.037",
+    "val_scs_objects": "0.940",
+    "ood_psnr": "30.436",
+    "ood_ssim": "0.919",
+    "ood_lpips": "0.038",
+    "ood_scs_objects": "0.937"
+  }
+];

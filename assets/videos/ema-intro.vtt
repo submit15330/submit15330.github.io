@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.000
+Initial images from Bridge, RoboMIND, and DROID.
+
+00:00:02.000 --> 00:00:05.000
+Robot renderings are overlaid on the initial images.
+
+00:00:05.000 --> 00:00:05.500
+The rendering overlay clears.
+
+00:00:05.500 --> 00:00:08.500
+Future frames predicted by Doppel.
+
+00:00:08.500 --> 00:00:10.500
+The three examples expand into nine examples.
+
+00:00:10.500 --> 00:00:12.750
+Initial observations, then robot rendering overlays, then the overlays clear.
+
+00:00:12.750 --> 00:00:14.500
+Predicted frames for nine examples.
+
+00:00:14.500 --> 00:00:16.500
+The nine examples expand into eighty-one examples.
+
+00:00:16.500 --> 00:00:18.750
+Robot renderings over the initial images from DROID, RoboMIND, and Bridge.
+
+00:00:18.750 --> 00:00:21.250
+Predicted videos on DROID, RoboMIND, and Bridge.

@@ -1,0 +1,21 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.000
+Initial image and configuration trajectory
+Predict future images from an initial observation and a planned robot configuration trajectory.
+
+00:00:04.000 --> 00:00:08.000
+Future robot renderings
+Render the robot along the supplied joint and gripper trajectory from the observation viewpoint.
+
+00:00:08.000 --> 00:00:12.000
+Shared world model
+Doppel combines future robot renderings with the numerical action trajectory.
+
+00:00:12.000 --> 00:00:18.000
+Future scene prediction
+The video backbone predicts future frames conditioned on the initial observation and robot motion.
+
+00:00:18.000 --> 00:00:24.000
+Franka, UR5e, and WidowX
+A shared conditioning adapter and video backbone are trained across all three embodiments.
